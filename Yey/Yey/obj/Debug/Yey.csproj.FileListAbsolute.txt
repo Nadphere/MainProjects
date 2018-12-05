@@ -1,0 +1,7 @@
+F:\C#\Yey\Yey\bin\Debug\Yey.exe.config
+F:\C#\Yey\Yey\bin\Debug\Yey.exe
+F:\C#\Yey\Yey\bin\Debug\Yey.pdb
+F:\C#\Yey\Yey\obj\Debug\Yey.csproj.CoreCompileInputs.cache
+F:\C#\Yey\Yey\obj\Debug\Yey.exe
+F:\C#\Yey\Yey\obj\Debug\Yey.pdb
+F:\C#\Yey\Yey\obj\Debug\Yey.csprojAssemblyReference.cache
