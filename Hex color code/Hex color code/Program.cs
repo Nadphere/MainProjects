@@ -11,29 +11,121 @@ namespace Hex_color_code
         static void Main(string[] args)
         {
 
-            string ToHex(int red, int green, int blue)
+            string ToHex(int decimalNum)
             {
-                string redHex = red.ToString("X");
-                string greenHex = green.ToString("X");
-                string blueHex = blue.ToString("X");
+                string Hex = decimalNum.ToString("X");
 
-                return "#" + redHex + greenHex + blueHex;
-
+                return Hex;
             }
 
-            string choice;
+            int choice;
+            int num;
+            string hexNum;
+            int intNum;
+            string stringNum;
+
+            string version = "1.05";
 
             while (true)
             {
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("DECIMAL AND HEX CONVERTER. BY NADPHER (v 1.0)");
+                Console.WriteLine("DECIMAL AND HEX CONVERTER. BY NADPHER (v {0})", version);
                 Console.ResetColor();
 
                 Console.WriteLine("To convert a decimal number to hexadecimal, press 1.\nTo convert a hexadecimal number to decimal, press 2.\nTo quit, press 0.\n");
 
-                choice = Convert.ToString(Console.ReadKey());
+                choice = Convert.ToInt32(Console.ReadLine());
 
-                
+                if (choice == 0)
+                {
+                    break;
+                }
+                else if (choice == 1)
+                {
+                    while(true){
+                        try{
+                            Console.Clear();
+
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine("DECIMAL AND HEX CONVERTER. BY NADPHER (v {0})", version);
+                            Console.ResetColor();
+
+                            Console.WriteLine("Write the number you want to convert: ");
+
+                            
+                            num = Convert.ToInt32(Console.ReadLine());
+                            hexNum = ToHex(num);
+                            Console.Clear();
+
+                            Console.WriteLine("The number in hexadecimal is {0}", hexNum);
+                            Console.ReadKey();
+                            Console.Clear();
+
+                            break;
+
+                            
+                        }catch{
+                            Console.WriteLine("Invalid input.");
+                            Console.ReadKey();
+                            continue;
+                        }
+                    }
+                }
+                else if (choice == 2)
+                {
+                    while(true){
+                        try{
+                            Console.Clear();
+
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine("DECIMAL AND HEX CONVERTER. BY NADPHER (v {0})", version);
+                            Console.ResetColor();
+
+                            Console.WriteLine("Insert the number you want to convert: ");
+
+                            hexNum = Console.ReadLine();                            
+                            intNum = Convert.ToInt32(hexNum, 16);
+                            stringNum = Convert.ToString(intNum);
+
+                            Console.Clear();
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine("DECIMAL AND HEX CONVERTER. BY NADPHER (v {0})", version);
+                            Console.ResetColor();
+
+                            Console.WriteLine("The number in decimal is {0}", stringNum);
+                            Console.ReadKey();
+                            Console.Clear();
+                            
+
+                            intNum = Convert.ToInt32(hexNum, 16);
+                            stringNum = Convert.ToString(intNum);
+
+                            Console.Clear();
+
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine("DECIMAL AND HEX CONVERTER. BY NADPHER (v {0})", version);
+                            Console.ResetColor();
+
+                            Console.WriteLine("The number in decimal is {0}", stringNum);
+                            Console.ReadKey();
+                            Console.Clear();
+
+                            break;
+
+                        }catch{
+                            Console.WriteLine("Invalid input.");
+                            Console.ReadKey();
+                            continue;
+                        }
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Choose a valid option!");
+                    Console.Clear();
+                }
+
+
             }
 
         }

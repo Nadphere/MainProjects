@@ -21,11 +21,8 @@ namespace Yey
 
     class Program
     {
-        Vars v = new Vars("https://www.youtube.com/watch?v=6Dh-RL__uN4");
 
-        bool run = true;
-        
-        while(bool run == true)
+        public MethodAccessException Main
         
     }
 }
